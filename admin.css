@@ -1,0 +1,346 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.user-section {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.user-section .profile-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #fff;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(255, 255, 255);
+}
+
+.user-section .logout {
+    margin-left: 20px;
+    cursor: pointer;
+}
+/* Navigation Bar */
+nav {
+    background: #243b55;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+nav .logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #1d2b41;
+}
+
+nav ul li a.active {
+    background-color:rgb(0, 0, 0);
+    pointer-events: none; /* Disable the clickable behavior for the User Dashboard button */
+}
+
+
+.sidebar {
+    width: 250px;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: calc(100% - 60px);
+    background-color: #243b55;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sidebar a:hover,
+.sidebar a.active {
+    background-color: #1d2b41;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    margin-top: 70px;
+}
+
+.task-card {
+    background: white;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    display: inline-block;
+}
+
+.hidden {
+    display: none;
+}
+.logout-button {
+    padding: 10px 20px;
+    background-color:rgb(0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #c0392b;
+}
+
+/* Add Task Section */
+#add-task {
+width: 400px; /* Adjust width as needed */
+padding: 15px;
+background: white;
+border: 1px solid #ccc;
+border-radius: 5px;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+margin: 20px auto;
+}
+
+/* Form Styling */
+#add-task form {
+display: flex;
+flex-direction: column;
+}
+
+/* Input, Textarea, Select */
+#add-task input,
+#add-task textarea,
+#add-task select {
+width: 100%;
+padding: 8px;
+margin: 8px 0;
+border: 1px solid #ccc;
+border-radius: 3px;
+}
+
+/* Button */
+#add-task button {
+background: #243b55;
+color: white;
+border: none;
+padding: 10px;
+cursor: pointer;
+border-radius: 3px;
+}
+
+#add-task button:hover {
+background: #1d2b41;
+}
+
+/* Manage Tasks Section */
+#manage-tasks {
+width: 80%;
+margin: 20px auto;
+background: white;
+padding: 15px;
+border-radius: 5px;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Container */
+.task-container {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+/* Task Card */
+.task-card {
+width: 250px;
+background: #ff0000;
+padding: 15px;
+border-radius: 5px;
+box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+text-align: center;
+}
+
+.task-card h3 {
+font-size: 18px;
+color: #ec0000;
+margin-bottom: 5px;
+}
+
+.task-card p {
+font-size: 14px;
+color: #c40000;
+}
+
+/* Delete Button */
+.task-card button {
+background: #d9534f;
+color: white;
+border: none;
+padding: 8px 12px;
+border-radius: 3px;
+cursor: pointer;
+}
+
+.task-card button:hover {
+background: #c9302c;
+}
+/* Manage Users Section */
+#manage-users {
+width: 80%;
+margin: 20px auto;
+background: white;
+padding: 15px;
+border-radius: 5px;
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling */
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 10px;
+}
+
+th, td {
+border: 1px solid #ddd;
+padding: 10px;
+text-align: left;
+}
+
+th {
+background: #243b55;
+color: white;
+}
+
+tr:nth-child(even) {
+background: #f9f9f9;
+}
+
+tr:hover {
+background: #f1f1f1;
+}
+
+/* Delete Button */
+button {
+background: #d9534f;
+color: white;
+border: none;
+padding: 8px 12px;
+border-radius: 3px;
+cursor: pointer;
+}
+
+button:hover {
+background: #c9302c;
+}
+/* Completion Requests Section */
+#completion-requests {
+    width: 80%;
+    margin: 20px auto;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Task Container */
+.task-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Task Card */
+.task-card {
+    width: 250px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.task-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.task-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Buttons */
+.task-card button {
+    display: inline-block;
+    width: 100px;
+    margin: 5px;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* Approve Button */
+.task-card a:first-child button {
+    background: #5cb85c;
+    color: white;
+}
+
+.task-card a:first-child button:hover {
+    background: #4cae4c;
+}
+
+/* Reject Button */
+.task-card a:last-child button {
+    background: #d9534f;
+    color: white;
+}
+
+.task-card a:last-child button:hover {
+    background: #c9302c;
+}

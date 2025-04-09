@@ -1,0 +1,253 @@
+        /* General Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: #243b55;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Search Bar */
+        .search-container {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+        }
+
+        .search-container input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .search-container button {
+            padding: 10px;
+            background: #1d2b41;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        /* User Section */
+        .user-section {
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .user-section .profile-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #fff;
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #243b55;
+        }
+
+        .user-section .logout {
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        /* No Result Found */
+        .no-results {
+            text-align: center;
+            font-size: 18px;
+            color: #f44336;
+            margin-top: 20px;
+        }
+
+        /* Dashboard Button */
+        .dashboard-btn {
+            background: #3701b4;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-left: 20px;
+        }
+
+        .dashboard-btn:hover {
+            background: #3b628f;
+        }
+
+        .logout-button {
+            padding: 10px 20px;
+            background-color:rgb(0, 0, 0);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout-button:hover {
+            background-color:rgb(209, 23, 3);
+        }
+
+.task-section h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Task Slider */
+.task-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 15px;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    scrollbar-color: #bbb transparent;
+}
+
+/* Hide scrollbar for WebKit-based browsers */
+.task-slider::-webkit-scrollbar {
+    height: 6px;
+}
+
+.task-slider::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
+
+/* Task Card Styling */
+.task-card {
+    flex: 0 0 320px;
+    width: 320px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto; /* Ensures proper spacing */
+}
+
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Task Image */
+.task-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Task Title */
+.task-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Task Description */
+.task-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 12px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-height: 60px; /* Prevents overflow */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+h2{
+    text-align: center;
+}
+
+/* Ensure Button is Always at Bottom */
+.task-card button {
+    margin-top: auto; /* Pushes button to bottom */
+}
+/* Buttons */
+button {
+    padding: 12px 15px;
+    background: #007bff;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+button:disabled {
+    background: #2bff00;
+    cursor: not-allowed;
+}
+
+/* No Results Message */
+.no-results {
+    text-align: center;
+    font-size: 16px;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .task-card {
+        flex: 0 0 90%;
+        width: 90%;
+    }
+
+    .task-slider {
+        flex-wrap: nowrap;
+    }
+}
